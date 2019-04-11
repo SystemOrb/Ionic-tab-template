@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tab2</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-title>{{personaje.nombre}}</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-thumbnail class="profile">
+        <img [src]="personaje.images">
+    </ion-thumbnail>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle text-center>{{personaje.nombre}}</ion-card-subtitle>
+            <ion-card-title text-center>{{personaje.titulo}}</ion-card-title>
+            <ion-button (click)="toRoot();" expand="block" color="dark">Regresar</ion-button>
+        </ion-card-header>
+    </ion-card>
 </ion-content>

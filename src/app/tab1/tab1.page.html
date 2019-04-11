@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tab1</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-title>Lista de personajes</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <!-- List of Text Items -->
+    <ion-list>
+        <ion-item (click)="ToInfoPage(ppl);" *ngFor="let ppl of Personajes">
+            <ion-avatar slot="start">
+                <img [src]="ppl.images">
+            </ion-avatar>
+            <ion-label>{{ppl.nombre}}</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
